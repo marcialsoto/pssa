@@ -1,3 +1,8 @@
+<header class="super-header">
+  <div class="container">
+    <h1><a class="logo" href="<?php echo esc_url(home_url('/')); ?>"><span><?php bloginfo('name'); ?></span></a></h1>
+  </div>
+</header>
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
     <div class="navbar-header">
@@ -7,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">

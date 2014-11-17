@@ -3,6 +3,7 @@
 
 // Variable overrides and custom variables
 @import "_variables";
+@import "_mixins";
 
 // Roots
 @import "_global";                   // Base styling & custom mixins
@@ -18,3 +19,72 @@
 @import "layouts/_pages";            // Page styling
 @import "layouts/pages/_home";       // Home page styling
 @import "layouts/_posts";            // Post styling
+
+
+// Header
+.logo{
+  background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
+  width: 112px;
+  height: 135px;
+  display: block;
+  outline: none;
+  text-indent: -9000px;
+  &:hover{
+    .opacity(0.9, 90);
+  }
+}
+
+// Links
+.main{
+  text-shadow: none;
+    a{
+      padding: 0 0 1px;
+      position: relative;
+      &:after{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: @pssa-green;
+        content: '';
+        opacity: 0;
+        -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+        -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+        transition: height 0.3s, opacity 0.3s, transform 0.3s;
+        -webkit-transform: translateY(-1px);
+        -moz-transform: translateY(-1px);
+        transform: translateY(-1px);
+      }
+      &:hover{
+        color: @pssa-green;
+        text-decoration: none;
+        &:after {
+          height: 1px;
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          transform: translateY(0px);
+        }
+      }
+      &:focus{
+        &:after {
+          height: 1px;
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          transform: translateY(0px);
+        }
+      }
+    }
+}
+
+
+// .super-header
+.super-header{
+  background-color: @pssa-green;
+  color: @white;
+    a{
+      color: @white;
+    }
+}
