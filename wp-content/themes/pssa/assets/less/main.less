@@ -22,15 +22,24 @@
 
 
 // Header
-.logo{
-  background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
-  width: 112px;
-  height: 135px;
-  display: block;
-  outline: none;
-  text-indent: -9000px;
-  &:hover{
-    .opacity(0.9, 90);
+#all-header{
+  background-image: url(../img/all-header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: @pssa-green;
+  .super-header{
+    background: transparent url(../img/super-header-bg.png) no-repeat center bottom;
+    .logo{
+      background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
+      width: 112px;
+      height: 135px;
+      display: block;
+      outline: none;
+      text-indent: -9000px;
+      &:hover{
+        .opacity(0.9, 90);
+      }
+    }
   }
 }
 
@@ -82,7 +91,6 @@
 
 // .super-header
 .super-header{
-  background-color: @pssa-green;
   color: @white;
     a{
       color: @white;

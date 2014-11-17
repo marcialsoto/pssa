@@ -6794,7 +6794,16 @@ figure.alignnone {
     width: 33.33333333%;
   }
 }
-.logo {
+#all-header {
+  background-image: url(../img/all-header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #02b17a;
+}
+#all-header .super-header {
+  background: transparent url(../img/super-header-bg.png) no-repeat center bottom;
+}
+#all-header .super-header .logo {
   background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
   width: 112px;
   height: 135px;
@@ -6802,7 +6811,7 @@ figure.alignnone {
   outline: none;
   text-indent: -9000px;
 }
-.logo:hover {
+#all-header .super-header .logo:hover {
   /* IE 8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@opIe)";
   /* IE 5-7 */
@@ -6827,7 +6836,7 @@ figure.alignnone {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #62ae7c;
+  background: #02b17a;
   content: '';
   opacity: 0;
   -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
@@ -6839,7 +6848,7 @@ figure.alignnone {
       transform: translateY(-1px);
 }
 .main a:hover {
-  color: #62ae7c;
+  color: #02b17a;
   text-decoration: none;
 }
 .main a:hover:after {
@@ -6859,7 +6868,6 @@ figure.alignnone {
       transform: translateY(0px);
 }
 .super-header {
-  background-color: #62ae7c;
   color: #ffffff;
 }
 .super-header a {
