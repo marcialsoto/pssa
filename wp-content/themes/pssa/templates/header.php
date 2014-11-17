@@ -1,7 +1,23 @@
 <div id="all-header">
   <header class="super-header">
     <div class="container">
-      <h1><a class="logo" href="<?php echo esc_url(home_url('/')); ?>"><span><?php bloginfo('name'); ?></span></a></h1>
+      <div class="col-sm-2">
+        <h1><a class="logo" href="<?php echo esc_url(home_url('/')); ?>"><span><?php bloginfo('name'); ?></span></a></h1>
+      </div>
+
+      <div class="col-sm-2 col-sm-offset-4">
+        <?php
+          if (has_nav_menu('super_navigation')) :
+            wp_nav_menu(array('theme_location' => 'super_navigation', 'menu_class' => 'nav nav-pills nav-stacked nav-super-nav'));
+          endif;
+        ?>
+      </div>
+      <div class="col-sm-4">
+        <div class="buscador">
+          <span>Buscador</span>
+          <?php get_search_form( true ); ?>
+        </div>
+      </div>
     </div>
   </header>
   <header class="banner navbar navbar-default navbar-static-top" role="banner">

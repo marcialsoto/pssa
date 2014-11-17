@@ -29,15 +29,72 @@
   background-color: @pssa-green;
   .super-header{
     background: transparent url(../img/super-header-bg.png) no-repeat center bottom;
-    .logo{
-      background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
-      width: 112px;
-      height: 135px;
-      display: block;
-      outline: none;
-      text-indent: -9000px;
-      &:hover{
-        .opacity(0.9, 90);
+    h1{
+      margin: 0;
+      .logo{
+        background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
+        width: 112px;
+        height: 135px;
+        display: block;
+        outline: none;
+        text-indent: -9000px;
+        &:hover{
+          .opacity(0.9, 90);
+        }
+      }
+    }
+    .nav-super-nav{
+      margin-top: 20px;
+      li{
+        a{
+          &:before, &:after{
+            display: inline-block;
+          	.opacity(0, 00);
+          	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+          	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+          	transition: transform 0.3s, opacity 0.2s;
+          }
+          &:before {
+          	margin-right: 10px;
+          	content: '[';
+          	-webkit-transform: translateX(20px);
+          	-moz-transform: translateX(20px);
+          	transform: translateX(20px);
+          }
+          &:after {
+          	margin-left: 10px;
+          	content: ']';
+          	-webkit-transform: translateX(-20px);
+          	-moz-transform: translateX(-20px);
+          	transform: translateX(-20px);
+          }
+          padding: 3px 5px;
+          &:hover{
+            background: none;
+            &:after, &:before{
+              .opacity(1, 10);
+            	-webkit-transform: translateX(0px);
+            	-moz-transform: translateX(0px);
+            	transform: translateX(0px);
+            }
+          }
+          &:focus{
+            &:after, &:before{
+              .opacity(1, 10);
+              -webkit-transform: translateX(0px);
+              -moz-transform: translateX(0px);
+              transform: translateX(0px);
+            }
+          }
+        }
+      }
+    }
+
+    .buscador{
+      margin-top: 20px;
+      span{
+        display: block;
+        padding-bottom: 10px;
       }
     }
   }

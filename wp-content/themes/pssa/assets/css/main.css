@@ -6803,7 +6803,10 @@ figure.alignnone {
 #all-header .super-header {
   background: transparent url(../img/super-header-bg.png) no-repeat center bottom;
 }
-#all-header .super-header .logo {
+#all-header .super-header h1 {
+  margin: 0;
+}
+#all-header .super-header h1 .logo {
   background: transparent url(../img/logo-sm.png) no-repeat 0px 0px;
   width: 112px;
   height: 135px;
@@ -6811,7 +6814,7 @@ figure.alignnone {
   outline: none;
   text-indent: -9000px;
 }
-#all-header .super-header .logo:hover {
+#all-header .super-header h1 .logo:hover {
   /* IE 8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@opIe)";
   /* IE 5-7 */
@@ -6822,6 +6825,89 @@ figure.alignnone {
   -khtml-opacity: 0.9;
   /* Good browsers */
   opacity: 0.9;
+}
+#all-header .super-header .nav-super-nav {
+  margin-top: 20px;
+}
+#all-header .super-header .nav-super-nav li a {
+  padding: 3px 5px;
+}
+#all-header .super-header .nav-super-nav li a:before,
+#all-header .super-header .nav-super-nav li a:after {
+  display: inline-block;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@opIe)";
+  /* IE 5-7 */
+  filter: alpha(opacity=0);
+  /* Netscape */
+  -moz-opacity: 0;
+  /* Safari 1.x */
+  -khtml-opacity: 0;
+  /* Good browsers */
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -o-transition: -o-transform 0.3s, opacity 0.2s;
+     transition: transform 0.3s, opacity 0.2s;
+}
+#all-header .super-header .nav-super-nav li a:before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+   -o-transform: translateX(20px);
+      transform: translateX(20px);
+}
+#all-header .super-header .nav-super-nav li a:after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -ms-transform: translateX(-20px);
+   -o-transform: translateX(-20px);
+      transform: translateX(-20px);
+}
+#all-header .super-header .nav-super-nav li a:hover {
+  background: none;
+}
+#all-header .super-header .nav-super-nav li a:hover:after,
+#all-header .super-header .nav-super-nav li a:hover:before {
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@opIe)";
+  /* IE 5-7 */
+  filter: alpha(opacity=10);
+  /* Netscape */
+  -moz-opacity: 1;
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+  /* Good browsers */
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+   -o-transform: translateX(0px);
+      transform: translateX(0px);
+}
+#all-header .super-header .nav-super-nav li a:focus:after,
+#all-header .super-header .nav-super-nav li a:focus:before {
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@opIe)";
+  /* IE 5-7 */
+  filter: alpha(opacity=10);
+  /* Netscape */
+  -moz-opacity: 1;
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+  /* Good browsers */
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+   -o-transform: translateX(0px);
+      transform: translateX(0px);
+}
+#all-header .super-header .buscador {
+  margin-top: 20px;
+}
+#all-header .super-header .buscador span {
+  display: block;
+  padding-bottom: 10px;
 }
 .main {
   text-shadow: none;
