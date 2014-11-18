@@ -1,5 +1,5 @@
 <div id="all-header">
-  <header class="super-header">
+  <header class="super-header section">
     <div class="container">
       <div class="col-sm-2">
         <h1><a class="logo" href="<?php echo esc_url(home_url('/')); ?>"><span><?php bloginfo('name'); ?></span></a></h1>
@@ -13,14 +13,18 @@
         ?>
       </div>
       <div class="col-sm-4">
-        <div class="buscador">
-          <span>Buscador</span>
-          <?php get_search_form( true ); ?>
-        </div>
+        <ul class="nav nav-pills nav-stacked nav-super-nav buscador">
+          <li>Buscador</li>
+          <li class="divider"></li>
+          <li><?php get_search_form( true ); ?></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+        </ul>
       </div>
     </div>
   </header>
-  <header class="banner navbar navbar-default navbar-static-top" role="banner">
+  <header class="banner navbar navbar-default navbar-static-top main-navbar" role="banner">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">

@@ -44,7 +44,8 @@
       }
     }
     .nav-super-nav{
-      margin-top: 20px;
+      border-left: 1px solid @white;
+      margin-top: 30px;
       li{
         a{
           &:before, &:after{
@@ -69,7 +70,7 @@
           	transform: translateX(-20px);
           }
           padding: 3px 5px;
-          &:hover{
+          &:hover, &:focus, &:active{
             background: none;
             &:after, &:before{
               .opacity(1, 10);
@@ -78,23 +79,77 @@
             	transform: translateX(0px);
             }
           }
-          &:focus{
-            &:after, &:before{
-              .opacity(1, 10);
-              -webkit-transform: translateX(0px);
-              -moz-transform: translateX(0px);
-              transform: translateX(0px);
-            }
-          }
         }
       }
     }
 
     .buscador{
-      margin-top: 20px;
-      span{
-        display: block;
-        padding-bottom: 10px;
+        padding-left: 20px;
+        border-left: 1px solid @white;
+        .search-field {
+          background-color: transparent;
+          border-color: transparent;
+          border-left-color: @white;
+          border-bottom-color: @white;
+          border-top-color: @white;
+          .border-radiuses(0, 0, 0, 0);
+        }
+
+        .divider{
+          margin: 10px auto;
+        }
+        .input-group-btn{
+          .btn-default{
+            color: @white;
+            background-color: transparent;
+            border-color: transparent;
+            border-right-color: @white;
+            border-bottom-color: @white;
+            border-top-color: @white;
+            .border-radiuses(0, 0, 0, 0);
+          }
+        }
+
+      ::-webkit-input-placeholder {
+         color: @white !important;
+         .opacity(0.75, 75);
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+         color: @white !important;
+         .opacity(0.75, 75);
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+         color: @white !important;
+         .opacity(0.75, 75);
+      }
+
+      :-ms-input-placeholder {
+         color: @white !important;
+         .opacity(0.75, 75);
+      }
+
+    }
+  }
+
+  .navbar-default{
+    &.main-navbar{
+      background-color: @pssa-green;
+      text-transform: uppercase;
+      color: @white;
+      a{
+        color: @white;
+      }
+
+      ul{
+        &.navbar-nav{
+          li{
+            a{
+              color: @white;
+            }
+          }
+        }
       }
     }
   }
@@ -147,9 +202,15 @@
 
 
 // .super-header
+
 .super-header{
   color: @white;
     a{
       color: @white;
     }
+}
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
