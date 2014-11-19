@@ -8771,14 +8771,14 @@ figure.alignnone {
   z-index: 0;
 }
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption {
-  background-color: #ffffff;
   position: absolute;
+  background-color: #ffffff;
   left: 0;
   top: 0;
   bottom: 0;
   width: 35%;
   z-index: 1;
-  padding: 30px;
+  padding: 30px 10px 30px 30px;
 }
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption h1 {
   text-transform: uppercase;
@@ -8802,6 +8802,12 @@ figure.alignnone {
   position: absolute;
   bottom: 30px;
   left: 30px;
+}
+.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:after {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  content: url(../img/slider-bg.png);
 }
 .owl-carousel .owl-controls .owl-buttons .owl-prev {
   position: absolute;
