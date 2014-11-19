@@ -6,7 +6,7 @@
  * replace the dash with an underscore when adding it to the object below.
  *
  * .noConflict()
- * The routing is enclosed within an anonymous function so that you can 
+ * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  *
  * Google CDN, Latest jQuery
@@ -16,7 +16,7 @@
 
 (function($) {
 
-// Use this variable to set up the common and page specific functions. If you 
+// Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
 var Roots = {
   // All pages
@@ -29,6 +29,18 @@ var Roots = {
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+        $(document).ready(function() {
+          $("#owl-home").owlCarousel({
+              navigation : true, // Show next and prev buttons
+              slideSpeed : 300,
+              pagination : false,
+              singleItem:true,
+              autoPlay: true,
+              stopOnHover: true,
+              navigationText:	['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']
+          });
+        });
+      //Fin
     }
   },
   // About us page, note the change from about-us to about_us.

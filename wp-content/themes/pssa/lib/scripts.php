@@ -22,6 +22,9 @@ function roots_scripts() {
   if (WP_ENV === 'development') {
     $assets = array(
       'css'       => '/assets/css/main.css',
+      'owl_css'       => '/assets/vendor/owl-carousel/css/owl.carousel.css',
+      'owl_theme'       => '/assets/vendor/owl-carousel/css/owl.theme.css',
+      'owl_transitions'       => '/assets/vendor/owl-carousel/css/owl.transitions.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
@@ -38,6 +41,9 @@ function roots_scripts() {
   }
 
   wp_enqueue_style('roots_css', get_stylesheet_directory_uri() . $assets['css'], false, null);
+  wp_enqueue_style('owl_css', get_stylesheet_directory_uri() . $assets['owl_css'], false, null);
+  wp_enqueue_style('owl_theme', get_stylesheet_directory_uri() . $assets['owl_theme'], false, null);
+  wp_enqueue_style('owl_transitions', get_stylesheet_directory_uri() . $assets['owl_transitions'], false, null);
 
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
