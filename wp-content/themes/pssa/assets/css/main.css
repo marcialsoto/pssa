@@ -2363,6 +2363,9 @@ output {
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .form-control:focus,
 .comment-form input[type="text"]:focus,
@@ -3330,6 +3333,9 @@ input[type="button"].btn-block {
   -webkit-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .fade.in {
   opacity: 1;
@@ -4989,6 +4995,9 @@ a.list-group-item.active > .badge,
   -webkit-transition: border 0.2s ease-in-out;
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .thumbnail > img,
 .thumbnail a > img,
@@ -5133,6 +5142,9 @@ a.wp-caption.active {
   -webkit-transition: width 0.6s ease;
   -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .progress-striped .progress-bar,
 .progress-bar-striped {
@@ -6208,6 +6220,9 @@ button.close {
   -webkit-transition: 0.6s ease-in-out left;
   -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -8499,6 +8514,11 @@ figure.alignnone {
 body {
   font-family: "Roboto", sans-serif;
 }
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 #all-header {
   background-image: url(../img/all-header-bg.jpg);
   background-repeat: no-repeat;
@@ -8781,8 +8801,17 @@ body {
   z-index: 0;
 }
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption {
+  -webkit-transition: background-image 2s ease;
+  -o-transition: background-image 2s ease;
+  transition: background-image 2s ease;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: absolute;
-  background-color: #ffffff;
+  background-color: transparent;
+  background-image: url(../img/slider-bg-pat.png);
+  background-repeat: repeat;
+  background-position: 0 0;
   left: 0;
   top: 0;
   bottom: 0;
@@ -8809,6 +8838,7 @@ body {
 }
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .btn,
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .comment-form input[type="submit"] {
+  background-color: transparent;
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -8818,6 +8848,18 @@ body {
   top: 0;
   right: -20px;
   content: url(../img/slider-bg.png);
+}
+.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover {
+  background-image: url(../img/slider-bg-pat-hover.png);
+}
+.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover h1 {
+  color: #de5e2d;
+}
+.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover p {
+  color: #333333;
+}
+.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover:after {
+  content: '';
 }
 .owl-carousel .owl-controls .owl-buttons .owl-prev {
   position: absolute;
@@ -8850,6 +8892,7 @@ body {
 }
 .btn-main:hover {
   color: #a5401a;
+  border-color: #a5401a;
 }
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
