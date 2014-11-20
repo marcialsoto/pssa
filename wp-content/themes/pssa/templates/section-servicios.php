@@ -10,7 +10,7 @@
     </div>
     </div>
   </div>
-  <div class="col-sm-4 sub-section sub-section">
+  <div class="col-sm-4 sub-section sub-section oferentes">
     <div class="section-content">
       <div class="section-caption">
     <h2 class="section-title">Búsqueda de Oferentes</h2>
@@ -21,7 +21,7 @@
     </div>
     </div>
   </div>
-  <div class="col-sm-4 sub-section">
+  <div class="col-sm-4 sub-section precios">
     <div class="section-content">
       <div class="section-caption">
     <h2 class="section-title">Precio de Productos</h2>
