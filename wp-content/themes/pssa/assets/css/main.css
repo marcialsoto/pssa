@@ -8511,6 +8511,34 @@ figure.alignnone {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('../fonts/Roboto-Light-webfont.eot');
+  src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light-webfont.woff') format('woff'), url('../fonts/Roboto-Light-webfont.ttf') format('truetype'), url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+::-moz-selection {
+  background: #ffff9e;
+  color: #555555;
+}
+::selection {
+  background: #ffff9e;
+  color: #555555;
+}
+::-moz-selection {
+  background: #ffff9e;
+  color: #555555;
+}
+img::-moz-selection {
+  background: transparent;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -8733,49 +8761,6 @@ a {
 #all-header .navbar-default.main-navbar ul.navbar-nav li a {
   color: #ffffff;
 }
-.main {
-  text-shadow: none;
-  /*a{
-      padding: 0 0 1px;
-      position: relative;
-      &:after{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: @pssa-green;
-        content: '';
-        opacity: 0;
-        -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-        -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
-        transition: height 0.3s, opacity 0.3s, transform 0.3s;
-        -webkit-transform: translateY(-1px);
-        -moz-transform: translateY(-1px);
-        transform: translateY(-1px);
-      }
-      &:hover{
-        color: @pssa-green;
-        text-decoration: none;
-        &:after {
-          height: 1px;
-          opacity: 1;
-          -webkit-transform: translateY(0px);
-          -moz-transform: translateY(0px);
-          transform: translateY(0px);
-        }
-      }
-      &:focus{
-        &:after {
-          height: 1px;
-          opacity: 1;
-          -webkit-transform: translateY(0px);
-          -moz-transform: translateY(0px);
-          transform: translateY(0px);
-        }
-      }
-    }*/
-}
 .super-header {
   color: #ffffff;
 }
@@ -8785,6 +8770,78 @@ a {
 .section {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.section .sub-section .section-content {
+  -webkit-transition: background-image 2s ease;
+  -o-transition: background-image 2s ease;
+  transition: background-image 2s ease;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-image: url(../img/tile-bg.jpg);
+  min-height: 320px;
+  background-repeat: no-repeat;
+  background-position: center top 0;
+  border: 1px solid #eeeeee;
+}
+.section .sub-section .section-content .section-caption {
+  position: relative;
+  text-align: center;
+  background-image: url(../img/slider-bg-pat-hover.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  padding: 30px;
+}
+.section .sub-section .section-content .section-caption h2 {
+  font-family: "RobotoLight", sans-serif;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.section .sub-section .section-content .section-caption p {
+  display: block;
+  font-family: "Georgia", serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #777777;
+}
+.section .sub-section .section-content .section-caption:after {
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+  content: url(../img/tile-bg.png);
+}
+.section .sub-section .section-content .section-link {
+  position: absolute;
+  bottom: 5.5%;
+  left: 33%;
+}
+.section .sub-section .section-content .section-link .btn,
+.section .sub-section .section-content .section-link .comment-form input[type="submit"] {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  margin: 65px auto;
+  visibility: hidden;
+}
+.section .sub-section .section-content:hover {
+  border: 1px solid #b7b7b7;
+}
+.section .sub-section .section-content:hover .section-caption h2 {
+  margin-bottom: 0;
+  color: #de5e2d;
+}
+.section .sub-section .section-content:hover .section-caption p {
+  display: none;
+}
+.section .sub-section .section-content:hover .section-caption:after {
+  content: '';
+}
+.section .sub-section .section-content:hover .section-link .btn,
+.section .sub-section .section-content:hover .section-link .comment-form input[type="submit"] {
+  visibility: visible;
 }
 .owl-carousel .owl-wrapper-outer {
   background-color: #eeeeee;

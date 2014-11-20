@@ -1,4 +1,4 @@
-<div id="owl-home" class="owl-carousel owl-theme">
+<section id="owl-home" class="owl-carousel owl-theme">
   <div class="item">
     <img src="http://lorempixel.com/940/325/nature/1/" alt="The Last of us">
     <div class="item-caption">
@@ -27,4 +27,4 @@
     <p><a class="btn btn-main" href="#">Más info</a></p>
   </div>
 </div>
-</div>
+</section>

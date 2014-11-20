@@ -16,6 +16,7 @@
     <div class="content row">
       <main class="main" role="main">
         <?php get_template_part('templates/slider', 'home'); ?>
+        <?php get_template_part('templates/section', 'servicios'); ?>
       </main><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar" role="complementary">
