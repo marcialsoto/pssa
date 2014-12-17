@@ -8764,9 +8764,22 @@ a {
   background-color: #02b17a;
   text-transform: uppercase;
   color: #ffffff;
+  border-color: #ffffff;
 }
 #all-header .navbar-default.main-navbar a {
   color: #ffffff;
+}
+#all-header .navbar-default.main-navbar ul.navbar-nav li.active a {
+  background-color: #ffffff;
+  color: #555555;
+}
+#all-header .navbar-default.main-navbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu {
+  display: block;
+}
+#all-header .navbar-default.main-navbar ul.navbar-nav li.dropdown:hover ul.dropdown-menu li a {
+  color: #555555;
+  font-size: 13px;
+  text-transform: initial;
 }
 #all-header .navbar-default.main-navbar ul.navbar-nav li a {
   color: #ffffff;
@@ -8820,6 +8833,7 @@ a {
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 15px;
+  color: #333333;
 }
 .section .sub-section .section-content .section-caption p {
   display: block;
@@ -8885,17 +8899,14 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  position: absolute;
+  position: relative;
   background-color: transparent;
   background-image: url(../img/slider-bg-pat.png);
   background-repeat: repeat;
   background-position: 0 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 35%;
+  width: 100%;
   z-index: 1;
-  padding: 30px 10px 30px 30px;
+  padding: 30px;
 }
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption h1 {
   text-transform: uppercase;
@@ -8917,18 +8928,7 @@ a {
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .btn,
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .comment-form input[type="submit"] {
   background-color: transparent;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-}
-.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:after {
-  position: absolute;
-  top: 0;
-  right: -20px;
-  content: url(../img/slider-bg.png);
-}
-.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover {
-  background-image: url(../img/slider-bg-pat-hover.png);
+  position: relative;
 }
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover h1 {
   color: #de5e2d;
@@ -8936,19 +8936,15 @@ a {
 .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover p {
   color: #333333;
 }
-.owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover:after {
-  right: -10px;
-  content: '';
-}
 .owl-carousel .owl-controls .owl-buttons .owl-prev {
   position: absolute;
-  left: 40%;
-  top: 50%;
+  left: 5%;
+  top: 25%;
 }
 .owl-carousel .owl-controls .owl-buttons .owl-next {
   position: absolute;
   right: 5%;
-  top: 50%;
+  top: 25%;
 }
 .owl-carousel .owl-controls .owl-buttons .owl-prev,
 .owl-carousel .owl-controls .owl-buttons .owl-next {
@@ -9040,6 +9036,100 @@ a {
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .owl-carousel .owl-wrapper-outer {
+    background-color: #eeeeee;
+    border-left: 5px solid #eeeeee;
+    border-bottom: 5px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item {
+    position: relative;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item img {
+    position: relative;
+    z-index: 0;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption {
+    -webkit-transition: background-image 2s ease;
+    -o-transition: background-image 2s ease;
+    transition: background-image 2s ease;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    background-color: transparent;
+    background-image: url(../img/slider-bg-pat.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 35%;
+    z-index: 1;
+    padding: 30px;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption h1 {
+    text-transform: uppercase;
+    font-size: 150%;
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption time {
+    font-size: 13px;
+    font-weight: bold;
+    color: #de5e2d;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .item-body {
+    color: #555555;
+    font-size: 13px;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .btn,
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption .comment-form input[type="submit"] {
+    background-color: transparent;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    content: url(../img/slider-bg.png);
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover {
+    background-image: url(../img/slider-bg-pat-hover.png);
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover h1 {
+    color: #de5e2d;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover p {
+    color: #333333;
+  }
+  .owl-carousel .owl-wrapper-outer .owl-item .item .item-caption:hover:after {
+    right: -10px;
+    content: '';
+  }
+  .owl-carousel .owl-controls .owl-buttons .owl-prev {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+  }
+  .owl-carousel .owl-controls .owl-buttons .owl-next {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+  }
+  .owl-carousel .owl-controls .owl-buttons .owl-prev,
+  .owl-carousel .owl-controls .owl-buttons .owl-next {
+    background: none;
+    border: 2px solid #ffffff;
+    padding: 9px 15px;
+  }
+}
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {

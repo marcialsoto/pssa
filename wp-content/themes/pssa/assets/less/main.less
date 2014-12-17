@@ -195,6 +195,7 @@ a{
       background-color: @pssa-green;
       text-transform: uppercase;
       color: @white;
+      border-color: @white;
       a{
         color: @white;
       }
@@ -202,6 +203,28 @@ a{
       ul{
         &.navbar-nav{
           li{
+            &.active{
+              a{
+                background-color: @white;
+                color:@gray;
+              }
+            }
+            &.dropdown{
+              &:hover{
+                ul{
+                  &.dropdown-menu{
+                    display: block;
+                    li{
+                      a{
+                        color: @gray;
+                        font-size: 13px;
+                        text-transform: initial;
+                      }
+                    }
+                  }
+                }
+              }
+            }
             a{
               color: @white;
             }
@@ -266,6 +289,7 @@ a{
           font-size: 18px;
           font-weight: normal;
           margin-bottom: 15px;
+          color: @gray-dark;
         }
         p{
           display: block;
@@ -336,17 +360,14 @@ a{
         }
         .item-caption{
           .transition(background-image 2s ease);
-          position: absolute;
+          position: relative;
           background-color: transparent;
           background-image: url(../img/slider-bg-pat.png);
           background-repeat: repeat;
           background-position: 0 0;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          width: 35%;
+          width: 100%;
           z-index: 1;
-          padding: 30px 10px 30px 30px;
+          padding: 30px;
           h1{
             text-transform: uppercase;
             font-size: 150%;
@@ -366,28 +387,15 @@ a{
           }
           .btn{
             background-color: transparent;
-            position: absolute;
-            bottom:30px;
-            left: 30px;
+            position: relative;
           }
-          &:after{
-            position: absolute;
-            top:0;
-            right: -20px;
-            content: url(../img/slider-bg.png);
-          }
+
           &:hover{
-            background-image: url(../img/slider-bg-pat-hover.png);
             h1{
               color: @pssa-orange;
             }
             p{
               color: @gray-dark;
-            }
-
-            &:after{
-              right: -10px;
-              content: '';
             }
           }
         }
@@ -398,13 +406,13 @@ a{
     .owl-buttons{
       .owl-prev{
         position: absolute;
-        left: 40%;
-        top: 50%;
+        left: 5%;
+        top: 25%;
       }
       .owl-next{
         position: absolute;
         right: 5%;
-        top: 50%;
+        top: 25%;
       }
 
       .owl-prev, .owl-next{
@@ -479,7 +487,7 @@ a{
     border-top: 1px solid @green-line;
     font-size: 12px;
     a{
-      color: @pssa-green-dark; 
+      color: @pssa-green-dark;
       .opensans(bold);
     }
   }
@@ -507,7 +515,101 @@ a{
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
+  .owl-carousel{
+    .owl-wrapper-outer{
+      background-color: @gray-lighter;
+      border-left: 5px solid @gray-lighter;
+      border-bottom: 5px solid @gray-lighter;
+      border-top: 1px solid @gray-lighter;
+      border-right: 1px solid @gray-lighter;
+      .owl-item{
+      position: relative;
+        .item{
+          img{
+            position: relative;
+            z-index: 0;
+          }
+          .item-caption{
+            .transition(background-image 2s ease);
+            position: absolute;
+            background-color: transparent;
+            background-image: url(../img/slider-bg-pat.png);
+            background-repeat: repeat;
+            background-position: 0 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 35%;
+            z-index: 1;
+            padding: 30px;
+            h1{
+              text-transform: uppercase;
+              font-size: 150%;
+              margin-top: 0;
+              margin-bottom: 3px;
+            }
+            time{
+              font-size: 13px;
+              font-weight: bold;
+              color: @pssa-orange;
+              margin-bottom: 10px;
+              display: block;
+            }
+            .item-body{
+              color: @gray;
+              font-size: 13px;
+            }
+            .btn{
+              background-color: transparent;
+              position: absolute;
+              bottom:30px;
+              left: 30px;
+            }
+            &:after{
+              position: absolute;
+              top:0;
+              right: -20px;
+              content: url(../img/slider-bg.png);
+            }
+            &:hover{
+              background-image: url(../img/slider-bg-pat-hover.png);
+              h1{
+                color: @pssa-orange;
+              }
+              p{
+                color: @gray-dark;
+              }
 
+              &:after{
+                right: -10px;
+                content: '';
+              }
+            }
+          }
+        }
+      }
+    }
+    .owl-controls{
+      .owl-buttons{
+        .owl-prev{
+          position: absolute;
+          left: 40%;
+          top: 50%;
+        }
+        .owl-next{
+          position: absolute;
+          right: 5%;
+          top: 50%;
+        }
+
+        .owl-prev, .owl-next{
+          background: none;
+          border:2px solid @white;
+          padding: 9px 15px;
+        }
+      }
+    }
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
