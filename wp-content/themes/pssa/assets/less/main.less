@@ -26,26 +26,42 @@
 // Fuentes
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular-webfont.eot');
-    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
-         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'opensansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#opensansregular') format('svg');
 }
 
 @font-face {
-    font-family: 'RobotoLight';
-    src: url('../fonts/Roboto-Light-webfont.eot');
-    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
-         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
-         url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'opensanslight';
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Light-webfont.svg#opensanslight') format('svg');
 }
+
+@font-face {
+    font-family: 'opensansbold';
+    src: url('../fonts/OpenSans-bold-webfont.eot');
+    src: url('../fonts/OpenSans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-bold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-bold-webfont.svg#opensansbold') format('svg');
+}
+
+@font-face {
+    font-family: 'opensansextrabold';
+    src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
+    src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-ExtraBold-webfont.svg#opensansextrabold') format('svg');
+}
+
+
 
 ::selection 	 	{background: rgb(255,255,158); color: @gray;}
 ::-moz-selection 	{background: rgb(255,255,158); color: @gray;}
@@ -53,7 +69,7 @@ img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
 
 body{
-  font-family: "Roboto", sans-serif;
+  .opensans();
 }
 
 // Links
@@ -217,7 +233,7 @@ a{
   .sub-section{
     &.programa{
       .section-content{
-        background-image: url(../img/tile-bg.jpg);    
+        background-image: url(../img/tile-bg.jpg);
       }
     }
     &.oferentes{
@@ -244,7 +260,7 @@ a{
         background-position: 0 0;
         padding: 30px;
         h2{
-          font-family: "RobotoLight", sans-serif;
+          .opensans(light);
           margin-top: 0;
           text-transform: uppercase;
           font-size: 18px;
@@ -399,7 +415,75 @@ a{
     }
   }
 }
+// Footer
 
+.content-info{
+  background-color: @pssa-green-lime;
+  .opensans();
+
+  .widget{
+    color: @pssa-green-dark;
+    font-size: 12px;
+
+    &.footer-1{
+      h3{
+        .opensans(extrabold);
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+    }
+
+    &.footer-2{
+      h3{
+        .opensans();
+        font-size: 12px;
+        text-transform: inherit;
+        margin-bottom: 20px;
+      }
+    }
+
+    &.footer-3{
+      h3{
+        display: none;
+      }
+    }
+
+    a{
+      color: @pssa-green-dark;
+      border-bottom: 1px solid lighten(@pssa-green-dark, 5%);
+      text-decoration: none;
+      &:hover{
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    ul{
+      &.social{
+        li{
+          a{
+            border-bottom: 1px solid transparent;
+            font-size: 18px;
+            &:hover{
+              color: lighten(@pssa-green-dark, 15%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copy{
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid @green-line;
+    font-size: 12px;
+    a{
+      color: @pssa-green-dark; 
+      .opensans(bold);
+    }
+  }
+}
 
 // Utilitarios
 .btn{
