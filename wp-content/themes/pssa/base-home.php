@@ -14,15 +14,15 @@
 
   <div class="wrap container" role="document">
     <div class="content row">
-      <main class="main" role="main">
-        <?php get_template_part('templates/slider', 'home'); ?>
-        <?php get_template_part('templates/section', 'servicios'); ?>
-      </main><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar" role="complementary">
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
       <?php endif; ?>
+      <main class="main" role="main">
+        <?php get_template_part('templates/slider', 'home'); ?>
+        <?php get_template_part('templates/section', 'servicios'); ?>
+      </main><!-- /.main -->
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
