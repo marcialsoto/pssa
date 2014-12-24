@@ -8551,11 +8551,16 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1;
 }
 a {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
 #all-header {
   background-image: url(../img/all-header-bg.jpg);
@@ -8784,6 +8789,35 @@ a {
 #all-header .navbar-default.main-navbar ul.navbar-nav li a {
   color: #ffffff;
 }
+.main {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 30px !important;
+}
+.main p,
+.main ul,
+.main ol {
+  text-align: justify;
+}
+.main .page-header {
+  margin: 0 auto 20px;
+}
+.main .page-header h1 {
+  font-family: "opensanslight", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0;
+  color: #5a4900;
+}
+.main h3 {
+  color: #de5e2d;
+  font-size: 20px;
+}
+.main h2.entry-title {
+  font-size: 20px;
+}
 .super-header {
   color: #ffffff;
 }
@@ -8795,7 +8829,7 @@ a {
 }
 .sidebar .widget h3 {
   color: #5a4900;
-  font-family: "opensansbold", Helvetica, Arial, sans-serif;
+  font-family: "opensansextrabold", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   -moz-osx-font-smoothing: grayscale;

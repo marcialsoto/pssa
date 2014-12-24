@@ -70,11 +70,16 @@ img::-moz-selection	{background: transparent;}
 
 body{
   .opensans();
+  background-color: @humo;
 }
 
 // Links
 a{
   .transition(all 0.2s ease-in-out);
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 // Header
@@ -237,7 +242,32 @@ a{
 
 // Links
 .main{
+  background-color: @white;
+  margin-bottom: 20px;
+  padding: 30px !important;
+  p, ul, ol{
+    text-align: justify;
+  }
+  .page-header{
+  margin: 0 auto 20px;
+    h1{
+      .opensans(light);
+      margin-top: 0;
+      color: darken(@brown, 50%);
+    }
+  }
 
+  h3{
+    color: @pssa-orange;
+    font-size: 20px;
+  }
+
+  h2.entry-title{
+    font-size: 20px;
+    a{
+
+    }
+  }
 }
 
 
@@ -255,7 +285,7 @@ a{
     background-color: lighten(@brown, 25%);
     h3{
       color: darken(@brown, 50%);
-      .opensans(bold);
+      .opensans(extrabold);
       font-size: 12px;
       text-transform: uppercase;
       box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.02);
