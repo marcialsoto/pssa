@@ -12,7 +12,8 @@ function roots_setup() {
   register_nav_menus(array(
     'primary_navigation' => __('Primary Navigation', 'roots'),
     'super_navigation' => __('Super Navigation', 'roots'),
-    'programa_navigation' => __('Programa Navigation', 'roots')
+    'programa_navigation' => __('Programa Navigation', 'roots'),
+    'componentes_navigation' => __('Componentes Navigation', 'roots')
   ));
 
   // Add post thumbnails

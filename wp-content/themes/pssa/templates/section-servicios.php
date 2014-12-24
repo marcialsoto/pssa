@@ -6,7 +6,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="section-link">
-      <a class="btn btn-main" href="#">Saber más</a>
+      <a class="btn btn-main" href="<?php echo bloginfo('url'); ?>/proyecto-sierra-y-selva-alta/">Saber más</a>
     </div>
     </div>
   </div>

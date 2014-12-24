@@ -8790,6 +8790,48 @@ a {
 .super-header a {
   color: #ffffff;
 }
+.sidebar .widget {
+  background-color: #fff8da;
+}
+.sidebar .widget h3 {
+  color: #5a4900;
+  font-family: "opensansbold", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+  letter-spacing: 1.5px;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  padding: 15px;
+  margin: 0 auto;
+}
+.sidebar .widget ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+.sidebar .widget ul li {
+  font-size: 14px;
+  margin: 0;
+}
+.sidebar .widget ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.sidebar .widget ul li a:hover {
+  color: #016546;
+  background-color: #fffdf3;
+}
+.sidebar .widget ul li.active a {
+  color: #016546;
+  background-color: #fffdf3;
+}
 .section {
   padding-top: 30px;
   padding-bottom: 30px;
