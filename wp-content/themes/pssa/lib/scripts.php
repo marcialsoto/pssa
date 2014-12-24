@@ -30,10 +30,13 @@ function roots_scripts() {
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
     );
   } else {
-    $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
-    $assets     = json_decode($get_assets, true);
+    $get_assets = file_get_contents(get_stylesheet_directory_uri() . '/assets/manifest.json');
+    $assets     = json_decode($get_assets, true); 
     $assets     = array(
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
+      'owl_css'       => '/assets/vendor/owl-carousel/css/owl.carousel.css',
+      'owl_theme'       => '/assets/vendor/owl-carousel/css/owl.theme.css',
+      'owl_transitions'       => '/assets/vendor/owl-carousel/css/owl.transitions.css',
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
