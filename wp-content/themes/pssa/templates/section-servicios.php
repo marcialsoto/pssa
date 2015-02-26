@@ -13,7 +13,7 @@
   <div class="col-sm-4 sub-section sub-section oferentes">
     <div class="section-content">
       <div class="section-caption">
-    <h2 class="section-title">Búsqueda de Oferentes</h2>
+    <h2 class="section-title">Oferentes</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="section-link">

@@ -8792,7 +8792,6 @@ a:hover {
 .main {
   background-color: #ffffff;
   margin-bottom: 20px;
-  padding: 30px !important;
 }
 .main p,
 .main ul,
@@ -8817,6 +8816,12 @@ a:hover {
 }
 .main h2.entry-title {
   font-size: 20px;
+}
+.home .main {
+  background-color: transparent;
+}
+.sidebar-primary .main {
+  padding: 30px;
 }
 .super-header {
   color: #ffffff;
